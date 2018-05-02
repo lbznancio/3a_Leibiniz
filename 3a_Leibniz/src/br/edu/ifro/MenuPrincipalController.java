@@ -28,12 +28,11 @@ public class MenuPrincipalController implements Initializable {
     
     @FXML
     private void Soma(ActionEvent event) {
-        Double num1= Double.parseDouble (txtNumero1.getText ());
-        Double num2= Double.parseDouble (txtNumero2.getText ());
+        Double num1= Double.parseDouble(txtNumero1.getText());
+        Double num2= Double.parseDouble(txtNumero2.getText());
         Double resultado= num1 + num2;
         
-        txtResultado.setText (resultado.toString ());
-    
+        txtResultado.setText(resultado.toString());
     }
        
     @Override
