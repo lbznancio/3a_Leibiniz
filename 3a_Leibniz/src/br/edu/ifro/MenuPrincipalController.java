@@ -49,23 +49,24 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     private void abrirCadastroAluno(ActionEvent event) {
-    
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("Aluno.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(),900,682);
+            Stage stage = new Stage();
+            stage.setTitle("Cadastrar Cliente");
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(IOException e){
+            System.out.println(e.getMessage());
+
+        }
     }
 
     @FXML
-    private void fecharProjeto(ActionEvent event) {
-    try{
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("Aluni.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),900,682);
-        Stage stage = new Stage();
-        stage.setTitle("Cadastrar Aluno");
-        stage.setScene(scene);
-        stage.show();
-    }
-    catch(IOException e){
-
-    }
+    private void fecharProjeto(ActionEvent event) throws IOException {
+        
     }
     
 }
